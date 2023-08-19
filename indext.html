@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+    }
+
+    .img {
+      background-position: center;
+      background-image: url(sssss.jpg);
+      width: 100%;
+      background-repeat: no-repeat;
+
+      height: 980px;
+    }
+
+    .overlee {
+      background-color: rgba(10, 10, 10, 0.916);
+      height: 980px;
+    }
+
+    .time {
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      color: #eeedf0;
+      font-size: 100px;
+      font-weight: bold;
+    }
+
+    .time {
+      /* position: absolute;
+      margin: 0 auto;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0; */
+
+      text-align: center;
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="img">
+    <div class="overlee">
+      <div class="time">
+        <span id="hours"></span><span>:</span>
+        <span id="minutes"></span><span>:</span>
+        <span id="seconds"></span><span>:</span>
+        <span id="session"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function displayTime() {
+      var dateTime = new Date();
+      var hrs = dateTime.getHours();
+      var min = dateTime.getMinutes();
+      var sec = dateTime.getSeconds();
+      var session = document.getElementById('session');
+
+
+      if (hrs >= 12) {
+        session.innerHTML = 'PM';
+      } else {
+        session.innerHTML = 'AM';
+      }
+
+      if (hrs > 12) {
+        hrs = hrs - 12;
+      }
+
+      document.getElementById('hours').innerHTML = hrs;
+      document.getElementById('minutes').innerHTML = min;
+      document.getElementById('seconds').innerHTML = sec;
+    }
+    setInterval(displayTime, 10);
+  </script>
+</body>
+
+</html>

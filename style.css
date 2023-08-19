@@ -1,0 +1,15 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+
+}
+
+.conteiner{
+ margin: 0 auto;
+ margin-left: 40%;
+ margin-top: 20%;
+  color: #fff;
+  font-size: 300px;
+  font-weight: bolder;
+}
